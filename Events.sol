@@ -21,7 +21,5 @@ contract EventExample {
 
          return true ;
 
-     }
-
-              
+     }          
 }
