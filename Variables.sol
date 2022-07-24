@@ -6,22 +6,25 @@ contract WorkingWithVariables{
     function setMyUint(uint _myUint) public {
         myUint = _myUint;
     }
-
+    
     bool public myBool;
 
     function setMyBool (bool _myBool) public{
         myBool = _myBool; 
     }
+    
 
     uint8 public myuint8;
 
     function incrementuint8() public {
         myuint8++;
     }
+    
 
     function decrementuint8() public{
         myuint8--;
     }
+    
 
     address public myAddress;
 
