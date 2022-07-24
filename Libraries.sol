@@ -10,7 +10,6 @@ contract LibrariesExample{
 
     constructor() public {
         tokenBalance[msg.sender] =1;
-    
     }
 
     function sendToken(address _to , uint _amount) public returns(bool){
