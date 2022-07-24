@@ -5,7 +5,6 @@ contract mappingstructexample{
     struct payment {
         uint amount;
         uint timestamps;
-
     }
 
     struct balance{
@@ -33,13 +32,12 @@ contract mappingstructexample{
 
         require(balancereceived[msg.sender].totalbalance >= _amount , "not enough funds");
         balancereceived[msg.sender].totalbalance -=_amount;
-        _to.transfer(_amount);
-        
+        _to.transfer(_amount);    
     }
+    
     function withdrawallmoney(address payable _to) public{
         uint  balancetosend =     balancereceived[msg.sender].totalbalance;
         balancereceived[msg.sender].totalbalance =0;
-        _to.transfer(balancetosend);
-        
+        _to.transfer(balancetosend);        
     }
 }
