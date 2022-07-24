@@ -14,8 +14,6 @@ contract InferitaceModifierExample is ownded {
         tokenBalance[owner] = 100;
     }
 
-    
-
     function createNewToken() public {
         tokenBalance[owner]++;
     }
