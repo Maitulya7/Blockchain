@@ -19,8 +19,6 @@ contract FunctionExample {
         return _amountInWei / 1 ether ;
     }
 
-
-
     function destorySmartContract()  public {
         require(msg.sender == owner ,"you are not the owner");
         selfdestruct(owner);
@@ -36,10 +34,7 @@ contract FunctionExample {
         assert(balanceReceived[msg.sender] >= balanceReceived[msg.sender] - _amount);
         balanceReceived[msg.sender] -= _amount;
         _to.transfer(_amount);
-
     }
-
-
     function() external payable {
         receiveMoney();
     }
