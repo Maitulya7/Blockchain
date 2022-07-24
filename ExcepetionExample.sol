@@ -1,6 +1,5 @@
 pragma solidity ^0.5.13;
 
-
 contract ExcepetionExample {
     mapping(address => uint64) public balanceReceived;
 
@@ -8,7 +7,7 @@ contract ExcepetionExample {
         assert(balanceReceived[msg.sender] + uint64(msg.value) >= balanceReceived[msg.sender]);
         balanceReceived[msg.sender] += uint64(msg.value);
     }
-
+    
     function withdrawMoney(address payable _to ,uint64 _amount) public{
         require(_amount <= balanceReceived[msg.sender],"your dont have enough ether!");{
         assert(balanceReceived[msg.sender] >= balanceReceived[msg.sender] -_amount);
